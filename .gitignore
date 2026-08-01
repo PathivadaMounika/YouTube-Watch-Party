@@ -1,0 +1,26 @@
+# Java build
+backend/target/
+
+# Eclipse / STS
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.factorypath
+backend/.springBeans
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Environment files
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
