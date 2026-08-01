@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: youtube-watch-party-api
+    runtime: java
+    rootDir: backend
+    plan: free
+
+    buildCommand: ./mvnw clean package -DskipTests
+
+    startCommand: java -jar target/backend-0.0.1-SNAPSHOT.jar
+
+    envVars:
+      - key: DB_URL
+        sync: false
+
+      - key: DB_USERNAME
+        sync: false
+
+      - key: DB_PASSWORD
+        sync: false
+
+      - key: JWT_SECRET
+        generateValue: true
+
+      - key: JWT_EXPIRATION_MINUTES
+        value: "1440"
