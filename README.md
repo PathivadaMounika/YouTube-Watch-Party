@@ -236,14 +236,25 @@ Database
 
 # Screenshots
 
-You can add screenshots of:
+Register Page
+<img width="1363" height="617" alt="Screenshot from 2026-08-02 13-51-15" src="https://github.com/user-attachments/assets/58d33760-5742-4b43-b103-feea6e9c4e57" />
 
-- Login Page
-- Register Page
-- Dashboard
-- Watch Room
-- Live Chat
-- Multiple Participants
+Login Page
+<img width="1363" height="617" alt="Screenshot from 2026-08-02 13-51-30" src="https://github.com/user-attachments/assets/eb11ea12-5f21-41e3-90cd-ebeaeb6e5f4b" />
+
+Dashboard page
+<img width="1363" height="617" alt="Screenshot from 2026-08-02 13-51-42" src="https://github.com/user-attachments/assets/be29b6cd-7156-4a45-8711-e333bb17b698" />
+
+chat and emojis
+<img width="1363" height="617" alt="Screenshot from 2026-08-02 13-51-54" src="https://github.com/user-attachments/assets/49e3d17d-9563-4cba-a091-e039571d1ed1" />
+
+watch page
+<img width="1363" height="617" alt="Screenshot from 2026-08-02 13-53-52" src="https://github.com/user-attachments/assets/a68a5d0f-9181-4e66-b871-70402a06eea7" />
+
+Synchronization
+<img width="868" height="477" alt="Screenshot from 2026-08-02 13-59-00" src="https://github.com/user-attachments/assets/1667ce03-dd34-461a-b117-e6fe7c52313e" />
+
+
 
 ---
 
