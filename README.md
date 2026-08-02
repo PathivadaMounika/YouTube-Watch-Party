@@ -258,6 +258,49 @@ Synchronization
 
 ---
 
+## Architecture Overview
+
+The YouTube Watch Party application follows a client-server architecture with a React frontend, a Spring Boot backend, and a MySQL database. The backend exposes REST APIs for authentication, room management, and user operations, while WebSockets provide real-time communication between participants.
+
+### How WebSockets Integrate with the Flow
+
+1. Users register or log in using REST APIs secured with JWT authentication.
+2. A user creates or joins a watch room through REST endpoints.
+3. After entering a room, the frontend establishes a WebSocket connection to the backend using **SockJS** and **STOMP** (`/ws` endpoint).
+4. The client subscribes to room-specific topics (e.g., `/topic/room/{roomId}`) to receive real-time updates.
+5. User actions such as:
+   - Joining or leaving a room
+   - Playing or pausing the video
+   - Seeking to a different timestamp
+   - Sending chat messages
+   - Transferring host privileges
+   are sent to the backend through STOMP message destinations (`/app/...`).
+6. The backend processes these events and broadcasts the updated room state or chat messages to all connected participants via WebSocket topics.
+7. Every connected client receives the updates instantly and synchronizes its UI without refreshing the page.
+
+### Communication Flow
+
+```
+        React Frontend
+              │
+      REST API (HTTP)
+              │
+      Spring Boot Backend
+              │
+        MySQL Database
+              │
+     ─────────────────────
+      WebSocket (SockJS)
+              │
+          STOMP Broker
+              │
+      /topic/room/{id}
+              │
+     All Connected Clients
+```
+
+This architecture combines REST APIs for request-response operations with WebSockets for low-latency, real-time synchronization, ensuring that all participants experience the same video playback state and live interactions simultaneously.
+
 # Future Improvements
 
 - Voice Chat
