@@ -316,7 +316,7 @@ This architecture combines REST APIs for request-response operations with WebSoc
 
 # Author
 
-**Pathiavada Mounika**
+**Pathivada Mounika**
 
 GitHub:
 https://github.com/PathivadaMounika
